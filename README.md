@@ -15,14 +15,12 @@ DONE:
 - Created a webpage with a 16x16 grid of square divs using Javascript
 -- Created a container div in html to hold the squares
 -- Used Flexbox to make the square divs in a grid (vs. one on each line)
--Create button to 
+-Create button that prompts the user for the number of squares per side to create a new grid. 
+-- Limited the number for the user input to a maximum of 100
+-- The size of the container is unchanged(the total number of pixels used is unchanged)
+--Before anything else, on button click, remove the previously created child div elements from the container element
 
 TO DO:
 - Set up a hover effect so that the grid divs change colour when your mouse
 passes over them, leaving a pixelated trail through the grid
 *Idea: use DOM methods and event listeners. When x happens, change the style (background-color) to a different color
-
-- Add a button at the top of the screen that will send the user a popup (prompt) asking for the number of squares per side for the new grid. Once entered, the existing grid should be
-removed, and a new grid should be generated in the same total space as before (creating a new sketchpad). 
--- Set the limit for the user input to a maximum of 100
--- The total number of pixels used won't be changed *I don't understand this part
