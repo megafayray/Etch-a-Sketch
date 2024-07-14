@@ -21,5 +21,6 @@ DONE:
 --Before anything else, on button click, remove the previously created child div elements from the container element
 - Set up a hover effect so that the grid divs change colour when your mouse passes over them, leaving a pixelated trail through the grid
 -Remove "border: dashed red;" from the div attributes (I used this while testing to distinguish the individual divs from each other)
+- Randomize the div colours with each interaction
 
 TO DO:

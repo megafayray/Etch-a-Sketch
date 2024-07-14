@@ -16,7 +16,11 @@ function createDivs(){
 const parent = document.querySelector("#container");
 parent.addEventListener("mouseover", hover);
 function hover(e){
-    e.target.style.backgroundColor = "green";
+    let red = Math.floor(Math.random()*249);
+    let green = Math.floor(Math.random()*249);
+    let blue = Math.floor(Math.random()*249);
+    let mixUp = "rgb" + "(" + red + "," + green + "," + blue + ")";
+    e.target.style.backgroundColor = mixUp;
 };
 
 // On button click, clear previous grid and create new one
@@ -32,23 +36,18 @@ button.addEventListener("click", () => {
     //Prompt, then make new grid:
     
     let enteredNumber = prompt("How many squares do you want?");
-    console.log(enteredNumber); //test = passed
     if (enteredNumber >100 || 
         isNaN(enteredNumber)){
         alert("Please enter a number <= 100");
     } else {
         let totalSquares = enteredNumber * enteredNumber;
-        console.log(totalSquares); //test = passed
         for (let i = 0; i < totalSquares; i++){
             const newDiv = document.createElement("div");
             newDiv.setAttribute("style", "background: pink; width:15px; aspect-ratio: 1/1; box-sizing: border-box;")
             let percentage = (100 / enteredNumber) + "%";
-            console.log(percentage); //test = passed
             newDiv.style.flexBasis = percentage;
             newDiv.classList.add("newSquares");
             container.appendChild(newDiv);
         }
     };
 });
-
-    
