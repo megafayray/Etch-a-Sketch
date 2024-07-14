@@ -5,11 +5,19 @@ function createDivs(){
     const container = document.querySelector("#container");
     for (let i = 0; i < (16*16); i++){
         const div = document.createElement("div");
-        div.setAttribute("style", "background: black; width:15px; aspect-ratio: 1/1; box-sizing: border-box; border: dashed red; flex: 1 0 6.25%;")
+        div.setAttribute("style", "background: black; width:15px; aspect-ratio: 1/1; box-sizing: border-box; flex: 1 0 6.25%;")
         div.classList.add("squares");
         container.appendChild(div);
     };
 }
+
+//When mouse enters a div, change its background colour:
+
+const parent = document.querySelector("#container");
+parent.addEventListener("mouseover", hover);
+function hover(e){
+    e.target.style.backgroundColor = "green";
+};
 
 // On button click, clear previous grid and create new one
 // based on user entered value:
@@ -33,7 +41,7 @@ button.addEventListener("click", () => {
         console.log(totalSquares); //test = passed
         for (let i = 0; i < totalSquares; i++){
             const newDiv = document.createElement("div");
-            newDiv.setAttribute("style", "background: pink; width:15px; aspect-ratio: 1/1; box-sizing: border-box; border: dashed red;")
+            newDiv.setAttribute("style", "background: pink; width:15px; aspect-ratio: 1/1; box-sizing: border-box;")
             let percentage = (100 / enteredNumber) + "%";
             console.log(percentage); //test = passed
             newDiv.style.flexBasis = percentage;
